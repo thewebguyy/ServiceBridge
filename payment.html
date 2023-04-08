@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ServiceBridge Payment Form</title>
+	<link rel="stylesheet" href="assets/css/payment-form.css">
+</head>
+<body>
+
+	<div class="container">
+		<form id="payment-form" method="POST" onsubmit="return validateForm()">
+			<h1>ServiceBridge Payment Form</h1>
+			<label for="name">Full Name:</label>
+			<input type="text" id="name" name="name" placeholder="John Doe" required>
+
+			<label for="email">Email Address:</label>
+			<input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+
+			<label for="amount">Amount (in Naira):</label>
+			<input type="number" id="amount" name="amount" placeholder="1000" min="1" required>
+
+			<label for="description">Description:</label>
+			<textarea id="description" name="description" placeholder="What is this payment for?" required></textarea>
+
+			<button type="submit">Submit</button>
+		</form>
+
+		<div id="payment-details"></div>
+	</div>
+
+	<script src="payment-script.js"></script>
+</body>
+</html>
