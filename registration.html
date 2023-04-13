@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+  </head>
+  <body>
+    <div class="container">
+      <form id="login-form">
+        <h1>Login</h1>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" id="login-button">Login</button>
+        <p class="error"></p>
+        <div class="or">
+          <hr class="bar">
+          <span>OR</span>
+          <hr class="bar">
+        </div>
+        <div class="social">
+          <button id="google-button"><img src="https://img.icons8.com/color/24/000000/google-logo.png"/> Continue with Google</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="auth.js"></script>
+  </body>
+</html>
