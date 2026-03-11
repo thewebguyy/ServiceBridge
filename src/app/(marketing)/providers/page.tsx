@@ -1,6 +1,7 @@
 import { providerService } from '@/services/providerService';
 import { Star, MapPin } from 'lucide-react';
 import Link from 'next/link';
+import { SmartSearchAssistant } from '@/components/features/SmartSearchAssistant';
 
 export default async function ProvidersDiscoveryPage({
   searchParams,
@@ -28,7 +29,9 @@ export default async function ProvidersDiscoveryPage({
 
   return (
     <div className="max-w-7xl mx-auto p-8 mt-10">
-      <h1 className="text-3xl font-bold tracking-tight mb-6">Find Professionals</h1>
+      <SmartSearchAssistant />
+
+      <h1 className="text-3xl font-bold tracking-tight mb-6 mt-12">Browse Professionals</h1>
 
       {/* Basic Filters Mockup */}
       <div className="bg-card w-full border p-4 rounded-lg flex gap-4 mb-8 shadow-sm">
