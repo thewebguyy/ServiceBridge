@@ -1,0 +1,100 @@
+﻿
+> temp-app@0.1.0 lint
+> eslint
+
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\admin\disputes\page.tsx
+  1:23  warning  'RefreshCcw' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\admin\providers\page.tsx
+  1:10  warning  'ShieldAlert' is defined but never used    @typescript-eslint/no-unused-vars
+  1:34  warning  'AlertTriangle' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\customer\booking\[bookingId]\page.tsx
+  4:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\customer\booking\[bookingId]\payment\page.tsx
+  70:71  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\customer\dashboard\page.tsx
+   7:9   warning  'clerkId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  16:12  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\customer\page.tsx
+  18:62  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\provider\dashboard\page.tsx
+   3:10  warning  'paymentService' is defined but never used       @typescript-eslint/no-unused-vars
+   8:9   warning  'user' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  14:5   warning  'activeJobs' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  15:12  warning  'error' is defined but never used                @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(dashboard)\provider\jobs\page.tsx
+   3:10  warning  'MapPin' is defined but never used         @typescript-eslint/no-unused-vars
+   3:18  warning  'Phone' is defined but never used          @typescript-eslint/no-unused-vars
+   3:25  warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+   3:40  warning  'CheckCircle' is defined but never used    @typescript-eslint/no-unused-vars
+   3:53  warning  'XCircle' is defined but never used        @typescript-eslint/no-unused-vars
+   6:9   warning  'user' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  14:12  warning  'error' is defined but never used          @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(marketing)\providers\[providerId]\page.tsx
+  59:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\(marketing)\providers\page.tsx
+  56:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\api\intent\route.ts
+   2:29  warning  'ParsedJobIntent' is defined but never used   @typescript-eslint/no-unused-vars
+   4:10  warning  'analyticsService' is defined but never used  @typescript-eslint/no-unused-vars
+  18:28  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\api\webhooks\paystack\route.ts
+  63:13  warning  'paymentRef' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  72:13  warning  'reference' is assigned a value but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\error.tsx
+  38:11  error  Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\app\not-found.tsx
+  15:20  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\components\features\ChatInterface.tsx
+  140:20  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\components\features\SmartSearchAssistant.tsx
+    9:48   error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   48:52   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  108:75   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  108:115  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\services\aiMatchingService.ts
+    2:10  warning  'providerService' is defined but never used               @typescript-eslint/no-unused-vars
+   77:68  error    Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+  133:38  error    Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+  147:66  error    Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+  150:9   error    'hoursEstimate' is never reassigned. Use 'const' instead  prefer-const
+  151:9   error    'cost' is never reassigned. Use 'const' instead           prefer-const
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\services\analyticsService.ts
+  36:60   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  48:169  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  55:76   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\services\messagingService.ts
+   2:19  warning  'MessageType' is defined but never used    @typescript-eslint/no-unused-vars
+  67:68  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  99:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\services\paymentService.ts
+    2:10  warning  'PaymentStatus' is defined but never used  @typescript-eslint/no-unused-vars
+    2:25  warning  'Payment' is defined but never used        @typescript-eslint/no-unused-vars
+  104:49  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  105:42  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+
+C:\Users\pstma\OneDrive\Documents\ServiceBridge\src\services\providerService.ts
+  85:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 50 problems (21 errors, 29 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
+
