@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login with Auth0</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="login-form">
+        <h1>Login</h1>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Log In</button>
+        <p id="error-message" class="error"></p>
+        <div class="or">
+          <hr class="bar" />
+          <span>or</span>
+          <hr class="bar" />
+        </div>
+        <div class="social">
+          <button id="google-button" type="button">
+            <img
+              src="https://img.icons8.com/color/16/000000/google-logo.png"
+              alt="Google Logo"
+            />
+            Continue with Google
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="auth.js"></script>
+  </body>
+</html>

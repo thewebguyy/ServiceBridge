@@ -1,24 +1,36 @@
-# ServiceBridge
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Service Bridge is a platform that connects professionals to people who need their services. Whether you're looking for a plumber, electrician, accountant, or any other kind of professional, Service Bridge makes it easy to find and connect with the right person for the job.
+## Getting Started
 
-How it Works
-Search for Services: Use the search bar to find the type of service you need. You can also browse by category or location to find professionals near you.
+First, run the development server:
 
-Compare Professionals: View profiles, ratings, and reviews of professionals to find the right person for your needs. You can also message professionals directly to ask questions or get more information.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Book and Pay: Once you've found the right professional, book their services and pay securely through the platform. Service Bridge also offers a dispute resolution service in case of any issues.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Rate and Review: After your service is complete, leave a rating and review of the professional to help others in the Service Bridge community make informed decisions.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Benefits
-Easy to use: Service Bridge's intuitive platform makes it easy to find and connect with professionals.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Secure payments: Service Bridge ensures that payments are made securely, so you can have peace of mind when booking services.
+## Learn More
 
-Wide range of professionals: Service Bridge has a large and diverse community of professionals, so you can find the right person for your needs.
+To learn more about Next.js, take a look at the following resources:
 
-Customer support: Service Bridge offers customer support to help you with any questions or issues you may have.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Join the Service Bridge Community
-If you're a professional looking to connect with more customers, or someone in need of professional services, join the Service Bridge community today. Service Bridge makes it easy to find the right person for the job.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
