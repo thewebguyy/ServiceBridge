@@ -1,14 +1,13 @@
 import { createClient } from '@/lib/supabase/client';
 import { Provider } from '@/types';
 
-const supabase = createClient();
-
 export const providerService = {
   /**
    * Discovery: Find providers by category
    * Utilizes the GIN index on service_categories
    */
   async getProvidersByCategory(category: string, limit = 20, page = 1) {
+    const supabase = createClient();
     const from = (page - 1) * limit;
     const to = from + limit - 1;
 
@@ -28,6 +27,7 @@ export const providerService = {
    * Discovery: Filter providers by exact geographic location
    */
   async getProvidersByLocation(location: string, limit = 20, page = 1) {
+    const supabase = createClient();
     const from = (page - 1) * limit;
     const to = from + limit - 1;
 
@@ -47,6 +47,7 @@ export const providerService = {
    * Discovery: Get top-rated providers globally
    */
   async getTopRatedProviders(limit = 10) {
+    const supabase = createClient();
     const { data, error } = await supabase
       .from('providers')
       .select('*, users!inner(name)')
@@ -63,6 +64,7 @@ export const providerService = {
    * Discovery: Get fastest responding providers globally
    */
   async getFastestRespondingProviders(limit = 10) {
+    const supabase = createClient();
     const { data, error } = await supabase
       .from('providers')
       .select('*, users!inner(name)')
@@ -79,6 +81,7 @@ export const providerService = {
    * Storage: Upload Portfolio Image (Max 10 images enforced via UI prior to this call)
    */
   async uploadPortfolioImage(providerId: string, file: File): Promise<string> {
+    const supabase = createClient();
     const fileExt = file.name.split('.').pop();
     const fileName = `${providerId}/${Math.random().toString(36).substring(2)}.${fileExt}`;
 

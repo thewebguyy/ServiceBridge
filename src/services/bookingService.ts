@@ -2,8 +2,6 @@ import { createClient } from '@/lib/supabase/client';
 import { Booking, BookingStatus } from '@/types';
 import { messagingService } from '@/services/messagingService';
 
-const supabase = createClient();
-
 type CreateBookingParams = Omit<Booking, 'id' | 'status' | 'created_at' | 'updated_at'>;
 
 export const bookingService = {
@@ -33,6 +31,7 @@ export const bookingService = {
       throw new Error(`Invalid state transition from ${currentStatus} to ${newStatus}`);
     }
 
+    const supabase = createClient();
     const { data, error } = await supabase
       .from('bookings')
       .update({ status: newStatus, updated_at: new Date().toISOString() })
@@ -55,6 +54,7 @@ export const bookingService = {
    * Customer: Creates a initial booking
    */
   async createBooking(params: CreateBookingParams): Promise<Booking> {
+    const supabase = createClient();
     const { data, error } = await supabase
       .from('bookings')
       .insert({ ...params, status: 'PENDING' })
@@ -91,6 +91,7 @@ export const bookingService = {
    * Provider: Starts an ACCEPTED job (Checks Escrow Funding first)
    */
   async startJob(bookingId: string, currentStatus: BookingStatus = 'ACCEPTED'): Promise<Booking> {
+    const supabase = createClient();
     const { data: booking, error: fetchErr } = await supabase
       .from('bookings')
       .select('*, payments!left(payment_status)')
@@ -139,6 +140,7 @@ export const bookingService = {
   // Queries for Dashboards
 
   async getCustomerBookings(customerId: string) {
+    const supabase = createClient();
     const { data, error } = await supabase
       .from('bookings')
       .select('*, providers!inner(display_name, hourly_rate)')
@@ -150,6 +152,7 @@ export const bookingService = {
   },
 
   async getProviderJobs(providerId: string) {
+    const supabase = createClient();
     const { data, error } = await supabase
       .from('bookings')
       .select('*, users!inner(name, phone, location)')
