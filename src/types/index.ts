@@ -29,6 +29,9 @@ export interface Provider {
   account_number?: string;
   account_name?: string;
   paystack_recipient_code?: string;
+  verification_documents?: string[];
+  verification_completed_at?: string;
+  trust_score?: number;
   created_at: string;
   updated_at: string;
 }
@@ -86,4 +89,29 @@ export interface Message {
   message_content: string;
   message_type: MessageType;
   created_at: string;
+}
+
+export interface Review {
+  id: string;
+  booking_id: string;
+  customer_id: string;
+  provider_id: string;
+  rating: number;
+  review_text?: string;
+  created_at: string;
+}
+
+export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'rejected';
+
+export interface Dispute {
+  id: string;
+  booking_id: string;
+  customer_id: string;
+  provider_id: string;
+  dispute_reason: string;
+  dispute_description: string;
+  status: DisputeStatus;
+  resolution_notes?: string;
+  created_at: string;
+  resolved_at?: string;
 }
