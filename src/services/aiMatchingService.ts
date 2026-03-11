@@ -1,4 +1,4 @@
-import Anthropic from '@anthropic-sdk/anthropic';
+import Anthropic from '@anthropic-ai/sdk';
 import { providerService } from './providerService';
 
 // Initialize server-side only Anthropic client
