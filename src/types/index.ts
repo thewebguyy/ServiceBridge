@@ -25,6 +25,65 @@ export interface Provider {
   total_reviews: number;
   response_time?: number; // In minutes
   completed_jobs: number;
+  bank_name?: string;
+  account_number?: string;
+  account_name?: string;
+  paystack_recipient_code?: string;
   created_at: string;
   updated_at: string;
+}
+
+export type BookingStatus = 
+  | 'PENDING' 
+  | 'ACCEPTED' 
+  | 'IN_PROGRESS' 
+  | 'COMPLETED' 
+  | 'PAID' 
+  | 'DECLINED' 
+  | 'CANCELLED' 
+  | 'DISPUTED' 
+  | 'RESOLVED';
+
+export interface Booking {
+  id: string;
+  customer_id: string; // References User
+  provider_id: string; // References Provider
+  status: BookingStatus;
+  scheduled_at: string;
+  amount: number;
+  escrow_ref?: string;
+  service_category: string;
+  location: string;
+  notes?: string;
+  estimated_price: number;
+  payment_id?: string;
+  escrow_released?: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export type PaymentStatus = 'initialized' | 'pending' | 'successful' | 'failed' | 'refunded';
+
+export interface Payment {
+  id: string;
+  booking_id: string;
+  customer_id: string;
+  provider_id: string;
+  amount: number;
+  currency: string;
+  paystack_reference: string;
+  payment_status: PaymentStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+export type MessageType = 'text' | 'image' | 'system';
+
+export interface Message {
+  id: string;
+  booking_id: string;
+  sender_id?: string; // Optional for system messages
+  message_content: string;
+  message_type: MessageType;
+  created_at: string;
 }
