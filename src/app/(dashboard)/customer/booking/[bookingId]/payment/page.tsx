@@ -3,10 +3,11 @@ import { createClient } from '@/lib/supabase/client';
 import { paymentService } from '@/services/paymentService';
 import { Lock, ShieldCheck, CheckCircle } from 'lucide-react';
 
-export default async function CustomerPaymentCheckout({ params }: { params: { bookingId: string } }) {
+export default async function PaymentPage({ params }: { params: Promise<{ bookingId: string }> }) {
+  const { bookingId } = await params;
   const user = await currentUser();
+  const customerId = user?.id || 'mock-customer-uuid';
   const supabase = createClient();
-  const bookingId = params.bookingId;
 
   // Retrieve Booking details
   const { data: booking, error } = await supabase

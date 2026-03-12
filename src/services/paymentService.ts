@@ -1,5 +1,4 @@
 import { createClient } from '@/lib/supabase/client';
-import { PaymentStatus, Payment } from '@/types';
 
 // In Server Components/Actions, we'll instantiate our own headers.
 const PAYSTACK_SECRET = process.env.PAYSTACK_SECRET_KEY as string;

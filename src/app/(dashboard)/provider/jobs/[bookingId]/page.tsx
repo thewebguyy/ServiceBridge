@@ -1,7 +1,8 @@
 import { ChatInterface } from '@/components/features/ChatInterface';
 import { currentUser } from '@clerk/nextjs/server';
 
-export default async function ProviderJobDetailsPage({ params }: { params: { bookingId: string } }) {
+export default async function ProviderJobDetailsPage({ params }: { params: Promise<{ bookingId: string }> }) {
+  const { bookingId } = await params;
   const user = await currentUser();
   const currentUserId = user?.id || 'mock-provider-uuid'; // Mapped to our providers table ID
 
@@ -19,7 +20,7 @@ export default async function ProviderJobDetailsPage({ params }: { params: { boo
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Chat Section */}
         <div className="md:col-span-2">
-           <ChatInterface bookingId={params.bookingId} currentUserId={currentUserId} />
+           <ChatInterface bookingId={bookingId} currentUserId={currentUserId} />
         </div>
 
         {/* Info Sidebar */}

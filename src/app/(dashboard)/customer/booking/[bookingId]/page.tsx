@@ -3,7 +3,8 @@ import { currentUser } from '@clerk/nextjs/server';
 import { Lock, AlertTriangle, CheckCircle, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
-export default async function CustomerBookingPage({ params }: { params: { bookingId: string } }) {
+export default async function CustomerBookingPage({ params }: { params: Promise<{ bookingId: string }> }) {
+  const { bookingId } = await params;
   const user = await currentUser();
   const currentUserId = user?.id || 'mock-customer-uuid'; // Mapped to our users table ID
 
@@ -20,7 +21,7 @@ export default async function CustomerBookingPage({ params }: { params: { bookin
         </div>
         
         <div className="space-x-3 flex items-center">
-           <a href={`/customer/booking/${params.bookingId}/payment`} className="px-5 py-2 border border-primary text-primary bg-primary/5 rounded-md font-semibold font-medium hover:bg-primary/10 shadow-sm transition-colors cursor-pointer">
+           <a href={`/customer/booking/${bookingId}/payment`} className="px-5 py-2 border border-primary text-primary bg-primary/5 rounded-md font-semibold font-medium hover:bg-primary/10 shadow-sm transition-colors cursor-pointer">
              View Payment Receipt
            </a>
         </div>
@@ -29,7 +30,7 @@ export default async function CustomerBookingPage({ params }: { params: { bookin
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Chat Section */}
         <div className="md:col-span-2">
-           <ChatInterface bookingId={params.bookingId} currentUserId={currentUserId} />
+           <ChatInterface bookingId={bookingId} currentUserId={currentUserId} />
         </div>
 
         {/* Info Sidebar */}

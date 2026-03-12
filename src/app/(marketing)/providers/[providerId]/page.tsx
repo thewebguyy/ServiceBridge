@@ -2,8 +2,8 @@ import { Star, MapPin, Clock, MessageCircle, FileText } from 'lucide-react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
 
-export default async function PublicProviderProfile({ params }: { params: { providerId: string } }) {
-  const providerId = params.providerId;
+export default async function PublicProviderProfile({ params }: { params: Promise<{ providerId: string }> }) {
+  const { providerId } = await params;
   const supabase = createClient();
   
   // Real implementation would fetch this. Mocked for phase definition

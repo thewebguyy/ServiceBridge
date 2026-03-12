@@ -6,13 +6,12 @@ import { SmartSearchAssistant } from '@/components/features/SmartSearchAssistant
 export default async function ProvidersDiscoveryPage({
   searchParams,
 }: {
-  searchParams: { category?: string; location?: string };
+  searchParams: Promise<{ category?: string; location?: string }>;
 }) {
-  const category = searchParams.category;
-  const location = searchParams.location;
+  const { category, location } = await searchParams;
 
   // Let's assume we fetch top rated if no filters
-  let providers = [];
+  let providers: any[] = [];
   try {
     if (category) {
       const res = await providerService.getProvidersByCategory(category);
